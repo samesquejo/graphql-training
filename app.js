@@ -21,25 +21,6 @@ const BookType = new GraphQLObjectType({
         id: { type: GraphQLInt },
         name: { type: GraphQLString },
         authorId: { type: GraphQLInt },
-        author: {
-            type: AuthorType,
-            resolve: (book) => {
-                return authors.find( authors => authors.id === book.authorId )
-            }
-        }
-    })
-})
-
-const AuthorType = new GraphQLObjectType({
-    name: 'AuthorType',
-    description: 'Author details',
-    fields: () => ({
-        id: { type: GraphQLInt },
-        name: { type: GraphQLString },
-        books: {
-            type: new GraphQLList(BookType),
-            resolve: (author) => books.filter( book => book.authorId === author.id )
-        }
     })
 })
 
@@ -59,20 +40,7 @@ const RootQueryType = new GraphQLObjectType({
                 id: { type: GraphQLInt }
             },
             resolve: (parent, args) => books.find( book => book.id === args.id)
-        },
-        getAllAuthors: {
-            type: new GraphQLList(AuthorType),
-            description: 'List of all Authors',
-            resolve: () => authors
-        },
-        getOneAuthor: {
-            type: AuthorType,
-            description: 'Fetch single author',
-            args: {
-                id: { type: GraphQLInt }
-            },
-            resolve: (parent, args) => authors.find( author => author.id === args.id)
-        },
+        }
     })
 })
 
@@ -128,7 +96,7 @@ const RootMutationType = new GraphQLObjectType({
                 const bookKey = books.findIndex( book => book.id === args.id )
                 books.splice(bookKey, 1)
 
-                return 1
+                return 'deleted'
             }
         }
     }
