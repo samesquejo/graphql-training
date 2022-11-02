@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "Harry Potter and the Philosopher's Stone",
+        "authorId": 1
+    },
+    {
+        "id": 2,
+        "name": "Harry Potter and the Chamber of Secrets",
+        "authorId": 1
+    },
+    {
+        "id": 3,
+        "name": "Harry Potter and the Prisoner of Azkaban",
+        "authorId": 1
+    },
+    {
+        "id": 4,
+        "name": "Harry Potter and the Goblet of Fire",
+        "authorId": 1
+    },
+    {
+        "id": 5,
+        "name": "Harry Potter and the Order of the Pheonix",
+        "authorId": 1
+    },
+    {
+        "id": 6,
+        "name": "Harry Potter and the Half-Blood Prince",
+        "authorId": 1
+    },
+    {
+        "id": 7,
+        "name": "Harry Potter and the Deathly Hollows",
+        "authorId": 1
+    },
+    {
+        "id": 8,
+        "name": "Harry Potter and the Cursed Child",
+        "authorId": 1
+    },
+    {
+        "id": 9,
+        "name": "A Game of Thrones",
+        "authorId": 2
+    },
+    {
+        "id": 10,
+        "name": "A Clash of Kings",
+        "authorId": 2
+    },
+    {
+        "id": 11,
+        "name": "The Hobbit",
+        "authorId": 3
+    },
+    {
+        "id": 12,
+        "name": "The Fellowship of the Ring",
+        "authorId": 3
+    },
+    {
+        "id": 13,
+        "name": "The Two Towers",
+        "authorId": 3
+    },
+    {
+        "id": 14,
+        "name": "The Return of the King",
+        "authorId": 3
+    }
+]
